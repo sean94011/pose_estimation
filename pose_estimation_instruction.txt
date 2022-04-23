@@ -1,0 +1,17 @@
+# enter the catkin_ws folder and launch the realsense ros with align depth
+
+$ cd ~/catkin_ws
+$ source devel/setup.bash
+$ roslaunch realsense2_camera rs_camera.launch align_depth:=true
+
+
+# open another terminal and run the below command for the pose_estimation
+
+$ conda activate pose_estimation
+$ cd catkin_ws/src/stretch_ros/pose_estimation
+$ python3 bodypix_pose_estimation.py
+
+
+For Audio just run
+
+roslaunch audio_capture capture.launch
